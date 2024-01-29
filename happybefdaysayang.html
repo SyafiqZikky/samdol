@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sayang Saya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('samad/backG4.jpg'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: mediumpurple;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      max-width: 80%;
+      max-height: 80%;
+      overflow-y: auto; /* Enable vertical scroll */
+    }
+    .popup img {
+      max-width: 100%;
+      height: auto;
+    }
+    .closeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>HELLO MY BELLE</h1>
+  <button id="showButton1">TEKAN NI SAYANG HEHE</button>
+  <button id="showButton2">CUBA NI PULAK</button>
+  <button id="showButton3">PSTU BARU TEKAN NI HSHS</button>
+
+  <!-- First Popup -->
+  <div class="popup" id="popup1">
+    <span class="closeButton" id="closeButton1">&times;</span>
+    <img src='samad/example1.jpg' alt="Happy Birthday">
+    <p><b>HAPPY BIRTHDAY TO YOU BEAUTIFUL GIRL!</b></p>
+    <p>saya mohammad syafiq zikry bin md yazid mengucapkan selamat hari jadi kepada khairunnisa binti junaidi aka sayanggg saya.hsshshshsh Happy befday sayang saya.befday yg ke 21 hshshshshs dah lebih 20 ayokkkk hshshshssh. first of all i want say yg saya berterima kasih tau sbb dah dtg dlm hidup saya. .lpstukan saya nak ckp saya sayng awak gila gila tau yg sayang ni orang yg kuat tau tpi sayang klau dgn saya sayang manja sgt hshshshs saya suka tu saya suka sayang sgt sgt ssmpai saya lupa diri sendiri ireally love you with all my heart saya minta maaf saya tk dpt nak bgi awak bunga or anythinng spcial saya minta maaf ye tak sehebat org org yg awak kenal nk tulis karangan hshshs lpstu kn saya doakan awak pnjang umur murah rezeki selalu semoga sayang dpt kejayaan yg sayang nak after thAT I LOVE YOU SO MUCH WITH MY WHOLE HEART .MEETING YOU WAS LIKE A HAPPY DREAM TO ME I HOPE I NEVER WAKE UP FROM TJIS HAPPY LIFE WITH YOU I MISS MEETING YU ALSO SAYA RINDU SEMUANYER .MY BELLE SAYA SAYANG AWAK sowwy tak gempak mana</p>
+    <p><b>FROM YOUR BABY TO MY BELLE</b></p>
+  </div>
+
+  <!-- Second Popup -->
+  <div class="popup" id="popup2">
+    <span class="closeButton" id="closeButton2">&times;</span>
+    <img src='samad/surprise2.jpg' alt="Nah Virtual  Cake">
+    <p><b>LOB LOB!</b></p>
+    <img src="samad/cake1.jpg" alt="HEHE">
+    <p>HEHE I LOVE YOU SO MUCH ENJOY YOUR DAY SAYANG</p>
+  </div>
+
+  <!-- Third Popup -->
+  <div class="popup" id="popup3">
+    <span class="closeButton" id="closeButton3">&times;</span>
+    <img src='samad/surprise3.jpg' alt="Another Surprise">
+    <p><b>NI HADIAH TPI VIRTUAL </b></p>
+    <p>SORRY SAYANG TK DPT YG BETUL PNYA</p>
+    <img src="samad/hadiah1.jpeg" alt="Gambo"> <!-- Add your image source here -->
+  </div>
+
+  <!-- Audio element for sound -->
+  <audio id="audio" src="samad/suaraku.mp3" loop></audio>
+
+  <script>
+    // Show Popup 1
+    document.getElementById('showButton1').addEventListener('click', function() {
+      document.getElementById('popup1').style.display = 'block';
+    });
+
+    // Show Popup 2
+    document.getElementById('showButton2').addEventListener('click', function() {
+      document.getElementById('popup2').style.display = 'block';
+    });
+
+    // Show Popup 3
+    document.getElementById('showButton3').addEventListener('click', function() {
+      document.getElementById('popup3').style.display = 'block';
+      playSoundForOneMinute(); // Call function to play sound for 1 minute
+    });
+
+    // Close Popup 1
+    document.getElementById('closeButton1').addEventListener('click', function() {
+      document.getElementById('popup1').style.display = 'none';
+    });
+
+    // Close Popup 2
+    document.getElementById('closeButton2').addEventListener('click', function() {
+      document.getElementById('popup2').style.display = 'none';
+    });
+
+    // Close Popup 3
+    document.getElementById('closeButton3').addEventListener('click', function() {
+      document.getElementById('popup3').style.display = 'none';
+      stopSound(); // Call function to stop the sound when the popup is closed
+    });
+
+    // Function to play sound for 1 minute
+    function playSoundForOneMinute() {
+      var audio = document.getElementById('audio');
+      audio.play();
+      setTimeout(function() {
+        stopSound();
+      }, 60000); // 60000 milliseconds = 1 minute
+    }
+
+    // Function to stop the sound
+    function stopSound() {
+      var audio = document.getElementById('audio');
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  </script>
+</body>
+</html>
